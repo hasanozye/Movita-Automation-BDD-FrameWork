@@ -56,9 +56,56 @@ public class MovitaStepDefinitions {
     public void click_to_dropdown_and_select_english_option() {
         movita.dropDown.click();
         movita.englishOption.click();
-        ReusableMethods.waitForVisibility(movita.mainTextEnglish,10);
+        ReusableMethods.waitForVisibility(movita.mainTextEnglish, 10);
         Assert.assertTrue(movita.mainTextEnglish.isDisplayed());
     }
+
+    @Given("hover on ROTA OPTIMIZASYONU")
+    public void hoverOnROTAOPTIMIZASYONU() {
+        ReusableMethods.changingColors(movita.rotaOptimizisyonu, "#00adee");
+        Assert.assertEquals(movita.rotaOptimizisyonu.getText(), "ROTA OPTIMIZASYONU");
+    }
+
+    @And("validates ROTA OPTIMIZASYONU component")
+    public void validatesROTAOPTIMIZASYONUComponent() {
+        ReusableMethods.seeComponent(movita.rotaOptimizisyonu);
+
+    }
+
+    @Given("validates UYGULAMALAR component")
+    public void validates_uygulamalar_component() {
+        ReusableMethods.seeComponent(movita.uygulamalar);
+    }
+
+    @And("hover on UYGULAMALAR")
+    public void hover_on_uygulamalar() {
+        ReusableMethods.changingColors(movita.uygulamalar, "#00adee");
+        Assert.assertEquals(movita.uygulamalar.getText(), "UYGULAMALAR");
+    }
+
+    @Given("validates KILAVUZ component")
+    public void validates_kılavuz_component() {
+        ReusableMethods.seeComponent(movita.kılavuz);
+    }
+
+    @Given("hover on KILAVUZ")
+    public void hover_on_kılavuz() {
+        ReusableMethods.changingColors(movita.kılavuz, "#00adee");
+        Assert.assertEquals(movita.kılavuz.getText(), "KILAVUZ");
+    }
+
+    @Given("validates İLETİŞİM component")
+    public void validates_iletişim_component() {
+        ReusableMethods.seeComponent(movita.iletisim);
+    }
+
+    @Given("hover on İLETİŞİM")
+    public void hover_on_iletişim() {
+        ReusableMethods.changingColors(movita.iletisim, "#00adee");
+        Assert.assertEquals(movita.iletisim.getText(), "İLETİŞİM");
+    }
+
+
 
 
 }
