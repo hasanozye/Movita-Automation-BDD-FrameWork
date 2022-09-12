@@ -1,10 +1,12 @@
 package stepdefinitions;
 
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.interactions.Actions;
 import pages.MovitaPage;
 import utilities.ConfigurationReader;
 import utilities.Driver;
@@ -13,26 +15,50 @@ import utilities.ReusableMethods;
 
 public class MovitaStepDefinitions {
 
-    MovitaPage movita=new MovitaPage();
+    MovitaPage movita = new MovitaPage();
 
-    @Given("User navigates to {string} page")
-    public void user_navigates_to_page(String homePage) {
-        Driver.getDriver().get(ConfigurationReader.getProperty(homePage));
+    @Given("Go to {string} page")
+    public void go_to_page(String string) {
+        Driver.getDriver().get("https://movita.com.tr/");
+        String movitaTitle = Driver.getDriver().getTitle();
+        Assert.assertTrue(movitaTitle.contains("movita"));
     }
-    @When("clicks on movita logo")
-    public void clicks_on_movita_logo() {
-       movita.movitaLogo.click();
+
+    @When("Hover the Movita Logo with mouse")
+    public void hover_the_movita_logo_with_mouse() {
+        ReusableMethods.hover(movita.movitaLogo);
+        ReusableMethods.waitForClickablility(movita.movitaLogo, 7);
     }
-    @Then("User should navigate to homepage")
-    public void user_should_navigate_to_homepage() {
-      String expectedUrl="https://movita.com.tr/";
-      String actualUrl=Driver.getDriver().getCurrentUrl();
-        Assert.assertEquals("Urls are not matched.User can't navigate to homepage",expectedUrl,actualUrl);
+
+    @And("Click with mouse")
+    public void clickWithMouse() {
+        movita.movitaLogo.click();
+        ReusableMethods.waitForVisibility(movita.mainTextTurkish, 10);
+        Assert.assertTrue(movita.mainTextTurkish.isDisplayed());
     }
-    @Then("Verify if Mobil Vasıta İzleme Takip Sistemi displayed")
-    public void verify_if_mobil_vasıta_izleme_takip_sistemi_displayed() {
-        ReusableMethods.waitForVisibility(movita.mainTextTurkish,3);
-       Assert.assertTrue(movita.mainTextTurkish.isDisplayed());
+
+    @When("Hover the Dropdown Section")
+    public void hover_the_dropdown_section() {
+        ReusableMethods.hover(movita.dropDown);
+        ReusableMethods.waitForClickablility(movita.dropDown, 7);
     }
+
+    @When("Click to Dropdown and select “Türkçe” option")
+    public void click_to_dropdown_and_select_türkçe_option() {
+        movita.dropDown.click();
+        movita.turkishOpiton.click();
+        ReusableMethods.waitForVisibility(movita.mainTextTurkish, 10);
+        Assert.assertTrue(movita.mainTextTurkish.isDisplayed());
+
+    }
+
+    @Then("Click to Dropdown and select “English” option")
+    public void click_to_dropdown_and_select_english_option() {
+        movita.dropDown.click();
+        movita.englishOption.click();
+        ReusableMethods.waitForVisibility(movita.mainTextEnglish,10);
+        Assert.assertTrue(movita.mainTextEnglish.isDisplayed());
+    }
+
 
 }
