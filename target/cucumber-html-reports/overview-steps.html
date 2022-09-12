@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+        <th>Number</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>cucumber-jvm-example</td>
+        <td>1</td>
+      <td>12 Sep 2022, 23:52</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">stepdefinitions.Hooks.setUp()</td>
+              <td>6</td>
+              <td class="duration" data-value="332883">0.000</td>
+              <td class="duration" data-value="332883">0.001</td>
+              <td class="duration" data-value="1997300">0.001</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.Hooks.tearDown(io.cucumber.java.Scenario)</td>
+              <td>6</td>
+              <td class="duration" data-value="1008577350">1.008</td>
+              <td class="duration" data-value="1008577350">1.235</td>
+              <td class="duration" data-value="6051464100">6.051</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.MovitaStepDefinitions.clickWithMouse()</td>
+              <td>1</td>
+              <td class="duration" data-value="2352247500">2.352</td>
+              <td class="duration" data-value="2352247500">2.352</td>
+              <td class="duration" data-value="2352247500">2.352</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.MovitaStepDefinitions.click_to_dropdown_and_select_english_option()</td>
+              <td>1</td>
+              <td class="duration" data-value="2623376000">2.623</td>
+              <td class="duration" data-value="2623376000">2.623</td>
+              <td class="duration" data-value="2623376000">2.623</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.MovitaStepDefinitions.click_to_dropdown_and_select_t&uuml;rk&ccedil;e_option()</td>
+              <td>1</td>
+              <td class="duration" data-value="2409779300">2.409</td>
+              <td class="duration" data-value="2409779300">2.409</td>
+              <td class="duration" data-value="2409779300">2.409</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.MovitaStepDefinitions.go_to_page(java.lang.String)</td>
+              <td>6</td>
+              <td class="duration" data-value="7632992216">7.632</td>
+              <td class="duration" data-value="7632992216">12.270</td>
+              <td class="duration" data-value="45797953300">45.797</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.MovitaStepDefinitions.hover_on_giri&#351;_yap()</td>
+              <td>1</td>
+              <td class="duration" data-value="230503700">0.230</td>
+              <td class="duration" data-value="230503700">0.230</td>
+              <td class="duration" data-value="230503700">0.230</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.MovitaStepDefinitions.hover_on_ileti&#351;im()</td>
+              <td>1</td>
+              <td class="duration" data-value="258589500">0.258</td>
+              <td class="duration" data-value="258589500">0.258</td>
+              <td class="duration" data-value="258589500">0.258</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.MovitaStepDefinitions.hover_on_k&#305;lavuz()</td>
+              <td>1</td>
+              <td class="duration" data-value="252804900">0.252</td>
+              <td class="duration" data-value="252804900">0.252</td>
+              <td class="duration" data-value="252804900">0.252</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.MovitaStepDefinitions.hover_on_rota_opt&#305;m&#305;zasyonu()</td>
+              <td>1</td>
+              <td class="duration" data-value="64421800">0.064</td>
+              <td class="duration" data-value="64421800">0.064</td>
+              <td class="duration" data-value="64421800">0.064</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.MovitaStepDefinitions.hover_on_uygulamalar()</td>
+              <td>1</td>
+              <td class="duration" data-value="239136600">0.239</td>
+              <td class="duration" data-value="239136600">0.239</td>
+              <td class="duration" data-value="239136600">0.239</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.MovitaStepDefinitions.hover_the_dropdown_section()</td>
+              <td>1</td>
+              <td class="duration" data-value="222627900">0.222</td>
+              <td class="duration" data-value="222627900">0.222</td>
+              <td class="duration" data-value="222627900">0.222</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.MovitaStepDefinitions.hover_the_movita_logo_with_mouse()</td>
+              <td>1</td>
+              <td class="duration" data-value="280113500">0.280</td>
+              <td class="duration" data-value="280113500">0.280</td>
+              <td class="duration" data-value="280113500">0.280</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.MovitaStepDefinitions.validates_giri&#351;_yap_component()</td>
+              <td>1</td>
+              <td class="duration" data-value="60895900">0.060</td>
+              <td class="duration" data-value="60895900">0.060</td>
+              <td class="duration" data-value="60895900">0.060</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.MovitaStepDefinitions.validates_ileti&#351;im_component()</td>
+              <td>1</td>
+              <td class="duration" data-value="76566200">0.076</td>
+              <td class="duration" data-value="76566200">0.076</td>
+              <td class="duration" data-value="76566200">0.076</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.MovitaStepDefinitions.validates_k&#305;lavuz_component()</td>
+              <td>1</td>
+              <td class="duration" data-value="67204300">0.067</td>
+              <td class="duration" data-value="67204300">0.067</td>
+              <td class="duration" data-value="67204300">0.067</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.MovitaStepDefinitions.validates_rota_opt&#305;m&#305;zasyonu_component()</td>
+              <td>1</td>
+              <td class="duration" data-value="322807800">0.322</td>
+              <td class="duration" data-value="322807800">0.322</td>
+              <td class="duration" data-value="322807800">0.322</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepdefinitions.MovitaStepDefinitions.validates_uygulamalar_component()</td>
+              <td>1</td>
+              <td class="duration" data-value="63803400">0.063</td>
+              <td class="duration" data-value="63803400">0.063</td>
+              <td class="duration" data-value="63803400">0.063</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>18</td>
+            <td>33</td>
+            <td class="duration">1.859</td>
+            <td class="duration">45.797</td>
+            <td class="duration">1:1.376</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
