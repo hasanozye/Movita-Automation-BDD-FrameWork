@@ -1,8 +1,42 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="8.855">
-    <testcase classname="US002_Verifying_Headers" name="TC03 &lt;--&gt; User validates &quot;UYGULAMALAR&quot; sub component" time="8.504">
-        <system-out><![CDATA[Given go to "movita" main page..............................................passed
-Given hover on "UYGULAMALAR"................................................passed
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="6" time="61.673">
+    <testcase classname="US001 Validation Of Logo And Dropdown" name="TC01 &lt;--&gt; User Validates Movita Logo" time="20.561">
+        <system-out><![CDATA[Given Go to "movita" page...................................................passed
+When Hover the Movita Logo with mouse.......................................passed
+And Click with mouse........................................................passed
+And Hover the Dropdown Section..............................................passed
+When Click to Dropdown and select “Türkçe” option...........................passed
+Then Click to Dropdown and select “English” option..........................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="US002_Verifying_Headers" name="TC02 &lt;--&gt; User validates &quot;ROTA OPTIMIZASYONU&quot; sub component" time="8.068">
+        <system-out><![CDATA[Given Go to "movita" page...................................................passed
+And validates ROTA OPTIMIZASYONU component..................................passed
+Given hover on ROTA OPTIMIZASYONU...........................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="US002_Verifying_Headers" name="TC03 &lt;--&gt; User validates &quot;UYGULAMALAR&quot; sub component" time="8.327">
+        <system-out><![CDATA[Given Go to "movita" page...................................................passed
+And validates UYGULAMALAR component.........................................passed
+Given hover on UYGULAMALAR..................................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="US002_Verifying_Headers" name="TC04 &lt;--&gt; User validates &quot;KILAVUZ&quot; sub component" time="8.292">
+        <system-out><![CDATA[Given Go to "movita" page...................................................passed
+And validates KILAVUZ component.............................................passed
+Given hover on KILAVUZ......................................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="US002_Verifying_Headers" name="TC05 &lt;--&gt; User validates &quot;İLETİŞİM&quot; sub component" time="7.527">
+        <system-out><![CDATA[Given Go to "movita" page...................................................passed
+And validates İLETİŞİM component............................................passed
+Given hover on İLETİŞİM.....................................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="US002_Verifying_Headers" name="TC06 &lt;--&gt; User validates &quot;İLETİŞİM&quot; sub component" time="8.611">
+        <system-out><![CDATA[Given Go to "movita" page...................................................passed
+And validates GİRİŞ YAP component...........................................passed
+Given hover on GİRİŞ YAP....................................................passed
 ]]></system-out>
     </testcase>
 </testsuite>
