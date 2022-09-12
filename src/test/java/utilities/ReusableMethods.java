@@ -116,7 +116,8 @@ public class ReusableMethods {
         Assert.assertEquals(afterHex, hexValue);
 
     }
-        //SEE THE COMPONENT IF IT DISPLAYED OR NOT\\
+
+    //SEE THE COMPONENT IF IT DISPLAYED OR NOT\\
     public static void seeComponent(WebElement component) {
 
         ReusableMethods.waitForVisibility(component, 10);
