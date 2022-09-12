@@ -60,16 +60,15 @@ public class MovitaStepDefinitions {
         Assert.assertTrue(movita.mainTextEnglish.isDisplayed());
     }
 
-    @Given("hover on ROTA OPTIMIZASYONU")
-    public void hoverOnROTAOPTIMIZASYONU() {
+    @Given("validates ROTA OPTIMIZASYONU component")
+    public void validates_rota_optımızasyonu_component() {
         ReusableMethods.changingColors(movita.rotaOptimizisyonu, "#00adee");
         Assert.assertEquals(movita.rotaOptimizisyonu.getText(), "ROTA OPTIMIZASYONU");
     }
 
-    @And("validates ROTA OPTIMIZASYONU component")
-    public void validatesROTAOPTIMIZASYONUComponent() {
+    @Given("hover on ROTA OPTIMIZASYONU")
+    public void hover_on_rota_optımızasyonu() {
         ReusableMethods.seeComponent(movita.rotaOptimizisyonu);
-
     }
 
     @Given("validates UYGULAMALAR component")
@@ -105,7 +104,16 @@ public class MovitaStepDefinitions {
         Assert.assertEquals(movita.iletisim.getText(), "İLETİŞİM");
     }
 
+    @Given("validates GİRİŞ YAP component")
+    public void validates_giriş_yap_component() {
+        ReusableMethods.seeComponent(movita.girisYap);
+    }
 
+    @Given("hover on GİRİŞ YAP")
+    public void hover_on_giriş_yap() {
+        ReusableMethods.changingColors(movita.girisYap, "#00adee");
+        Assert.assertEquals(movita.girisYap.getText(), "GİRİŞ YAP");
+    }
 
 
 }

@@ -43,6 +43,9 @@ public class MovitaPage {
     @FindBy(xpath = "//div[text()=\"İLETİŞİM\"]")
     public WebElement iletisim;
 
+    @FindBy(xpath = "//div[text()=\"GİRİŞ Yap\"]")
+    public WebElement girisYap;
+
 
 
 
