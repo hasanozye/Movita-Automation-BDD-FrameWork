@@ -9,22 +9,32 @@ import java.util.List;
 
 public class MovitaPage {
 
-    public MovitaPage(){
-        PageFactory.initElements(Driver.getDriver(),this);
+    public MovitaPage() {
+        PageFactory.initElements(Driver.getDriver(), this);
     }
 
-
-    @FindBy(xpath = "//div[text()=\"Kurumsal\"]")
-   public WebElement kurumsalMenu;
-
-    @FindBy(xpath = "(//ul[@class=\"sub-menu-container\"])[1]")
-    public List<WebElement> subKurumsalMenu;
-
-    @FindBy (id = "logo")
+    @FindBy(xpath = "//a[@class=\"standard-logo\"]")
     public WebElement movitaLogo;
 
     @FindBy(xpath = "//div[text()=\"Mobil Vasıta İzleme Takip Sistemi\"]")
     public WebElement mainTextTurkish;
+
+    @FindBy(xpath = "//button[@id=\"dropdownMenuButton\"]")
+    public WebElement dropDown;
+
+    @FindBy(xpath = "(//a[@class=\"dropdown-item\"])[2]")
+    public WebElement turkishOpiton;
+
+    @FindBy(xpath = "(//a[@class=\"dropdown-item\"])[1]")
+    public WebElement englishOption;
+
+    @FindBy(xpath = "(//div[@class=\"tp-caption ltl tp-resizeme revo-slider-emphasis-text p-0 border-0 skrollable skrollable-between\"])[1]")
+    public WebElement mainTextEnglish;
+
+
+
+
+
 
 
 }
