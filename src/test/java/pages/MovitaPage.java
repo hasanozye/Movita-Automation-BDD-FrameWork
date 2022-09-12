@@ -31,6 +31,18 @@ public class MovitaPage {
     @FindBy(xpath = "(//div[@class=\"tp-caption ltl tp-resizeme revo-slider-emphasis-text p-0 border-0 skrollable skrollable-between\"])[1]")
     public WebElement mainTextEnglish;
 
+    @FindBy(xpath = "(//div[text()=\"Rota Optimizasyonu\"])[1]")
+    public WebElement rotaOptimizisyonu;
+
+    @FindBy(xpath = "//div[text()=\"Uygulamalar\"]")
+    public WebElement uygulamalar;
+
+    @FindBy(xpath = "//div[text()=\"Kılavuz\"]")
+    public WebElement kılavuz;
+
+    @FindBy(xpath = "//div[text()=\"İLETİŞİM\"]")
+    public WebElement iletisim;
+
 
 
 
