@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="8.855">
+    <testcase classname="US002_Verifying_Headers" name="TC03 &lt;--&gt; User validates &quot;UYGULAMALAR&quot; sub component" time="8.504">
+        <system-out><![CDATA[Given go to "movita" main page..............................................passed
+Given hover on "UYGULAMALAR"................................................passed
+]]></system-out>
+    </testcase>
+</testsuite>
